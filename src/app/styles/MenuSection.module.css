@@ -1,0 +1,15 @@
+.menuSection {
+    margin-bottom: 20px;
+  }
+  
+  .sectionTitle {
+    padding-top: 40px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: var(--color-dark-gray);
+  }
+  
+  /* Add this if you want the first section title to not have top padding */
+  .menuSection:first-child .sectionTitle {
+    padding-top: 0;
+  }

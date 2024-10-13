@@ -1,0 +1,39 @@
+.menuItem {
+    display: flex;
+    flex-direction: column;
+    background-color: #2D2D34;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 15px;
+  }
+  
+  .itemInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .itemTitlePrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+  }
+  
+  .itemTitle {
+    color: #ED1C24;
+    font-size: 18px;
+    flex-grow: 1;
+  }
+  
+  .itemPrice {
+    color: #F0A202;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .itemDescription {
+    color: #F0F0F0;
+    font-size: 14px;
+    margin-top: 5px;
+  }

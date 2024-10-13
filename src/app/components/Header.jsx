@@ -30,6 +30,8 @@ export default function Header() {
         setMenuOpen(prevState => !prevState);
     }, []);
 
+    
+
     const NavItem = ({ href, children }) => {
         const isActive = pathname === href;
         return (

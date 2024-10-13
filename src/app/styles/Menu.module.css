@@ -1,0 +1,52 @@
+.pageContainer {
+    background-color: var(--color-light-gray);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .mainContent {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menuTitle {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+  }
+  
+  .menuContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .menuNavWrapper {
+    position: relative;
+    z-index: 100;
+  }
+  
+  .menuNavWrapper.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .menuContent {
+    padding: 20px;
+  }
+  
+  .menuItemsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .menuItemsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
