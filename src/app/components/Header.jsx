@@ -3,6 +3,7 @@
 import React, { useState, useCallback } from 'react';
 import '../styles/header.css';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import detectScreenSize from '../hooks/detectScreenSize';
 
 const HamburgerIcon = () => (
@@ -23,10 +24,22 @@ const CloseIcon = () => (
 export default function Header() {
     const isMobile = detectScreenSize('(max-width: 768px)');
     const [menuOpen, setMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     const toggleMenu = useCallback(() => {
         setMenuOpen(prevState => !prevState);
     }, []);
+
+    const NavItem = ({ href, children }) => {
+        const isActive = pathname === href;
+        return (
+            <li className={`nav-item ${isActive ? 'active' : ''}`}>
+                <Link href={href} prefetch onClick={isMobile ? toggleMenu : undefined}>
+                    {children}
+                </Link>
+            </li>
+        );
+    };
 
     return (
         <header className='header'>
@@ -45,42 +58,18 @@ export default function Header() {
                 <div className={`mobile-nav ${menuOpen ? 'open' : ''}`}>
                     <nav className='mobile-nav-bar'>
                         <ul className='mobile-nav-list'>
-                            <li className='mobile-nav-item'>
-                                <Link href="/" prefetch onClick={toggleMenu}>
-                                    Home
-                                </Link>
-                            </li>
-                            <li className='mobile-nav-item'>
-                                <Link href="/ourStory" prefetch onClick={toggleMenu}>
-                                    Our Story
-                                </Link>
-                            </li>
-                            <li className='mobile-nav-item'>
-                                <Link href="/menu" prefetch onClick={toggleMenu}>
-                                    Menu
-                                </Link>
-                            </li>
+                            <NavItem href="/">Home</NavItem>
+                            <NavItem href="/ourStory">Our Story</NavItem>
+                            <NavItem href="/menu">Menu</NavItem>
                         </ul>
                     </nav>
                 </div>
             ) : (
                 <nav className='nav-bar'>
                     <ul className='nav-list'>
-                        <li className='nav-item'>
-                            <Link href="/" prefetch>
-                                Home
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link href="/ourStory" prefetch>
-                                Our Story
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link href="/menu" prefetch>
-                                Menu
-                            </Link>
-                        </li>
+                        <NavItem href="/">Home</NavItem>
+                        <NavItem href="/ourStory">Our Story</NavItem>
+                        <NavItem href="/menu">Menu</NavItem>
                     </ul>
                 </nav>
             )}
