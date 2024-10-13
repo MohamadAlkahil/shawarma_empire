@@ -1,12 +1,10 @@
-import Image from "next/image";
-import styles from "./styles/page.module.css";
-import Header from "./components/Header";
+import Header from "../components/Header";
 
-export default function Home() {
+export default function Menu() {
   return (
     <div>
-      <Header/>
-      <h1>home</h1>
+      <Header />
+      <h1>Menu </h1>
       <p>Lorem ipsum dolor sit amet
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus gravida quis blandit turpis. Augue neque gravida in fermentum et sollicitudin ac orci. Et sollicitudin ac orci phasellus egestas. Elementum tempus egestas sed sed risus pretium quam vulputate. Interdum velit euismod in pellentesque massa placerat duis ultricies.
 
