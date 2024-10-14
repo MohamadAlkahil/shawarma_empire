@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import MenuNavBar from '../components/MenuNavBar';
 import MenuItem from '../components/MenuItem';
 import MenuSection from '../components/MenuSection';
+import Footer from "../components/Footer";
 
 const menuSections = [
   { id: 'sandwiches', title: 'Sandwiches' },
@@ -134,6 +135,7 @@ export default function Menu() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

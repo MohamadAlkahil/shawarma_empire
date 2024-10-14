@@ -1,0 +1,56 @@
+.locationContainer {
+    background-color: var(--color-dark-gray);
+    padding: 20px;
+    color: var(--color-light-gray);
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .title {
+    color: var(--color-light-gray);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .infoSection {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .info {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .buttonWrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: var(--color-red);
+    color: var(--color-light-gray);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--color-gold);
+  }
+  
+  @media (max-width: 768px) {
+    .infoSection {
+      text-align: center;
+    }
+  }

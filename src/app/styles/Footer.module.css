@@ -1,0 +1,31 @@
+.footer {
+    background-color: #ED1C24;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logosDiv {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.logoItem {
+    margin: 0 10px; /* This adds horizontal space between icons */
+}
+
+.policyDiv {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px; /* This adds space between the logos and policy items */
+}
+
+.policyItem {
+    margin: 0 10px; /* This adds space between policy items */
+    color: #F0F0F0; /* This makes the text white */
+}

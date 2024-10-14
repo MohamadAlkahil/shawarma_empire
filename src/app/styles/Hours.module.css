@@ -1,0 +1,67 @@
+.hoursContainer {
+    width: 100%;
+    background-color: var(--color-light-gray);
+    padding: 20px 0;
+  }
+  
+  .title {
+    text-align: center;
+    color: var(--color-dark-gray);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hoursTable {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  .hoursRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid var(--color-dark-gray);
+  }
+  
+  .hoursRow:last-child {
+    border-bottom: none;
+  }
+  
+  .day {
+    font-weight: bold;
+    color: var(--color-dark-gray);
+  }
+  
+  .time {
+    color: var(--color-dark-gray);
+  }
+  
+  .today {
+    background-color: var(--color-gold);
+    color: var(--color-light-gray);
+    border-radius: 4px;
+  }
+  
+  .today .day,
+  .today .time {
+    color: var(--color-light-gray);
+  }
+  
+  @media (max-width: 600px) {
+    .hoursTable {
+      width: 95%;
+    }
+    
+    .hoursRow {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .day {
+      margin-bottom: 5px;
+    }
+  }
