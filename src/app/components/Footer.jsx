@@ -6,6 +6,7 @@ import YelpLogo from '../assets/yelp-logo.svg';
 import FacebookLogo from '../assets/facebook-logo.svg';
 import InstagramLogo from '../assets/instagram-logo.svg';
 import TripAdvisorLogo from '../assets/trip-advisor-logo.svg';
+import Link from 'next/link';
 
 
 
@@ -29,7 +30,7 @@ export default function Footer() {
             </div>
             <div className={styles.policyDiv} herf="/">
                 <div className={styles.policyItem}>
-                    <p>Policy & Terms of Service</p>
+                    <Link href="/policy">Privacy Policy & Terms of Use</Link>
                 </div>
             </div>
         </footer>

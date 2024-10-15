@@ -2,7 +2,7 @@
 
 import styles from '../styles/StoryImage.module.css';
 import Image from 'next/image';
-import image1 from '../assets/image1.png'
+import baklava_image from '../assets/baklava.jpg'
 
 export default function StoryImage() {
     return(
@@ -10,7 +10,7 @@ export default function StoryImage() {
             <div className={styles.imageContainer}>
                 <div className={styles.imageWrapper}>
                     <Image 
-                        src={image1} 
+                        src={baklava_image} 
                         alt='Our Story' 
                         layout='fill' 
                         objectFit='cover' 
