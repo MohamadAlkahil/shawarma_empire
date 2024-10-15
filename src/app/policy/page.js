@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import styles from '../styles/Policy.module.css';
+import styles from '../styles/Policy.Module.css';
 
 export default function Policy() {
   return (
