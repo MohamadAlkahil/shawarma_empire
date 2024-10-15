@@ -5,9 +5,11 @@ import '../styles/header.css';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import detectScreenSize from '../hooks/detectScreenSize';
+import Image from 'next/image';
+import SELogo from '../assets/Logo.svg';
 
 const HamburgerIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -15,7 +17,7 @@ const HamburgerIcon = () => (
 );
 
 const CloseIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
@@ -45,7 +47,9 @@ export default function Header() {
 
     return (
         <header className='header'>
-            <h2 className='header-title'>Shawarma Empire</h2>
+            <div className='logo'>
+            <Image src={SELogo} alt="Logo" width={150} height={60} className="logo-image" />
+            </div>
             {isMobile && (
                 <button 
                     onClick={toggleMenu} 
