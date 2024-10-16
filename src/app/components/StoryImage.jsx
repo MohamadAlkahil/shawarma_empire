@@ -27,7 +27,7 @@ export default function StoryImage() {
                 <h1>Our Philosophy</h1>
                 <p>At Shawarma Empire, we believe in doing things the right way, not the easy way. For us, that means:</p>
                 <ul>
-                    <li>Using only the highest quality ingredients, like skinless chicken and premium strip loin beef.</li>
+                    <li>Using only the highest quality halal ingredients, like skinless chicken and premium strip loin beef.</li>
                     <li>Preparing everything from scratch, in-house, without preservatives.</li>
                     <li>Investing in our food rather than marketing—our customers are our best advertisers.</li>
                 </ul>

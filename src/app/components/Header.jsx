@@ -39,7 +39,7 @@ export default function Header() {
         return (
             <li className={`nav-item ${isActive ? 'active' : ''}`}>
                 <Link href={href} prefetch onClick={isMobile ? toggleMenu : undefined}>
-                    {children}
+                    <span>{children}</span>
                 </Link>
             </li>
         );
@@ -48,7 +48,9 @@ export default function Header() {
     return (
         <header className='header'>
             <div className='logo'>
-            <Image src={SELogo} alt="Logo" width={150} height={60} className="logo-image" />
+                <Link href="/">
+                    <Image src={SELogo} alt="Logo" width={150} height={60} className="logo-image"/>
+                </Link>
             </div>
             {isMobile && (
                 <button 

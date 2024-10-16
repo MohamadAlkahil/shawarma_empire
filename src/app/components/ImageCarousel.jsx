@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/ImageCarousel.module.css';
 
-const ImageCarousel = ({ images, autoPlayInterval = 5000 }) => {
+const ImageCarousel = ({ images, autoPlayInterval = 15000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {

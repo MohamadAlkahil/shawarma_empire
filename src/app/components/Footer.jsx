@@ -6,6 +6,7 @@ import YelpLogo from '../assets/yelp-logo.svg';
 import FacebookLogo from '../assets/facebook-logo.svg';
 import InstagramLogo from '../assets/instagram-logo.svg';
 import TripAdvisorLogo from '../assets/trip-advisor-logo.svg';
+import MoustachLogo from '../assets/moustach-logo.svg'
 import Link from 'next/link';
 
 
@@ -33,6 +34,7 @@ export default function Footer() {
                     <Link href="/policy">Privacy Policy & Terms of Use</Link>
                 </div>
             </div>
+            <Image src={MoustachLogo} alt="Moustach" width={24} height={24} />
         </footer>
     );
 }
