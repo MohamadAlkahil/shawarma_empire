@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/ImageCarousel.module.css';
@@ -8,22 +8,22 @@ import styles from '../styles/ImageCarousel.module.css';
 const ImageCarousel = ({ images, autoPlayInterval = 15000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) =>
        prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [images.length]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex((prevIndex) =>
        prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
-  };
+  }, [images.length]);
 
   useEffect(() => {
     const intervalId = setInterval(nextSlide, autoPlayInterval);
     return () => clearInterval(intervalId);
-  }, [autoPlayInterval]);
+  }, [nextSlide,autoPlayInterval]);
 
   return (
     <div className={styles.carouselContainer}>
