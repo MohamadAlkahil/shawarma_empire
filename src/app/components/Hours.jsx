@@ -12,17 +12,14 @@ const Hours = () => {
     { day: 'Sun', open: '12:00 PM', close: '9:00 PM' },
   ];
 
-  const today = new Date().getDay();
-  const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
   return (
     <div className={styles.hoursContainer}>
       <h2 className={styles.title}>Our Hours</h2>
       <div className={styles.hoursTable}>
-        {hours.map((item, index) => (
-          <div 
-            key={item.day} 
-            className={`${styles.hoursRow} ${daysOfWeek[today] === item.day ? styles.today : ''}`}
+        {hours.map((item) => (
+          <div
+            key={item.day}
+            className={styles.hoursRow}
           >
             <span className={styles.day}>{item.day}</span>
             <span className={styles.time}>{`${item.open} - ${item.close}`}</span>
